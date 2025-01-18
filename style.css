@@ -1,6 +1,135 @@
 body {
     /* Set line height to 1.5 times the font size
-         and use the OS’s UI font as the website font
-       */
+       and use the OS’s UI font as the website font
+    */
     font: 100%/1.5 system-ui;
-  }
+
+    /* Center content and prevent it from being too wide */
+    max-width: 100ch; /* Limits the width of the content */
+
+    /* Center content with dynamic padding/margin */
+    margin-inline: max(1em, (100% - 100ch) / 2);
+
+    /* Maintain vertical spacing */
+    margin-block: 1em;
+}
+
+/* Navigation bar styling */
+nav {
+    display: flex; /* Use Flexbox for layout */
+    justify-content: space-between; /* Evenly space links */
+    align-items: center; /* Align links vertically */
+    padding: 0.5em 1em; /* Add padding around the nav bar */
+    margin-bottom: 1em; /* Space below the navigation bar */
+    border-bottom: 1px solid oklch(80% 3% 200); /* Subtle gray border */
+}
+
+/* Navigation links styling */
+nav a {
+    text-decoration: none; /* Remove underline */
+    color: inherit; /* Inherit text color */
+    text-align: center; /* Center the text */
+    padding: 0.5em; /* Add spacing around links */
+    transition: color 0.3s, border-bottom 0.3s; /* Smooth hover effect */
+}
+
+/* Highlight for current page */
+nav a.current {
+    border-bottom: 0.4em solid oklch(80% 3% 200); /* Thicker bottom border */
+    padding-bottom: 0.1em; /* Adjust spacing to maintain alignment */
+}
+
+/* Hover effect for links */
+nav a:hover {
+    color: var(--color-accent); /* Change color to the accent color */
+    border-bottom: 0.4em solid var(--color-accent); /* Add hover border effect */
+}
+
+/* Accent color custom property */
+:root {
+    --color-accent: oklch(65% 50% 0); /* Define accent color */
+}
+/* Remove <ul> and <li> default styles */
+nav ul, 
+nav li {
+    display: contents; /* Makes them disappear visually while retaining structure */
+}
+/* Contact form styling */
+form {
+    display: grid; /* Use grid layout */
+    grid-template-columns: auto 1fr; /* Labels on the left, inputs on the right */
+    gap: 1em; /* Add spacing between items */
+    margin-top: 2em; /* Space above the form */
+}
+
+/* Style for form labels */
+form label {
+    margin-block: 0.5em; /* Add spacing above and below labels */
+    font-weight: bold; /* Emphasize labels */
+    text-align: right; /* Align text to the right */
+}
+
+/* Style for input, textarea, and button */
+form input,
+form textarea {
+    width: 100%; /* Make input fields take up the full width */
+    padding: 0.5em; /* Add padding for better usability */
+    font: inherit; /* Match font with the body text */
+    border: 1px solid #ccc; /* Light gray border for a clean look */
+    border-radius: 4px; /* Rounded corners */
+    box-sizing: border-box; /* Include padding and border in width */
+}
+
+/* Style for the submit button */
+form button {
+    grid-column: 1 / -1; /* Span the button across both columns */
+    padding: 0.5em 1em; /* Add padding for better click area */
+    background-color: var(--color-accent); /* Use accent color for the button */
+    color: white; /* White text on the button */
+    border: none; /* Remove default border */
+    border-radius: 4px; /* Rounded corners */
+    cursor: pointer; /* Pointer cursor for better UX */
+    transition: background-color 0.3s; /* Smooth hover effect */
+}
+
+form button:hover {
+    background-color: oklch(from var(--color-accent) 95% 5% h); /* Slightly lighter hover color */
+}
+/* Projects grid styling */
+.projects {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(auto-fill, minmax(15em, 1fr)); /* Responsive columns */
+    gap: 1em; /* Add spacing between items */
+    margin-top: 2em; /* Space above the grid */
+}
+
+/* Individual project article styling */
+.projects article {
+    padding: 1em;
+    border: 1px solid #ccc; /* Light border around each project */
+    border-radius: 4px;
+    text-align: center; /* Center content */
+    display: grid;
+    grid-template-rows: subgrid; /* Align rows with subgrid */
+    grid-row: span 3; /* Each project spans 3 rows */
+}
+
+/* Styling for headings inside articles */
+.projects h2 {
+    margin: 0; /* Remove extra margin */
+    font-size: 1.2em; /* Adjust heading size */
+    font-weight: bold;
+}
+
+/* Styling for placeholder images */
+.projects img {
+    width: 100%; /* Make images responsive */
+    height: auto;
+    margin: 0.5em 0; /* Space around the image */
+}
+
+/* General text styling for paragraphs in articles */
+.projects p {
+    margin: 0;
+    line-height: 1.4;
+}
