@@ -15,7 +15,7 @@ if (currentLink) {
   }
 // Defining the navigation menu items - creating array named pages with 2 items - url and title 
 let pages = [
-    { url: '', title: 'Home' },
+    { url: 'index.html', title: 'Home' },
     { url: 'projects/', title: 'Projects' },
     { url: 'contact/', title: 'Contact' },
     { url: 'resume/', title: 'Resume' },
