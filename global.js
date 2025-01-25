@@ -15,10 +15,10 @@ if (currentLink) {
   }
 // Defining the navigation menu items - creating array named pages with 2 items - url and title 
 let pages = [
-    { url: '/index.html', title: 'Home' },
-    { url: '../dsc106_test_portfolio/projects/index.html', title: 'Projects' },
-    { url: '../dsc106_test_portfolio/contact/index.html', title: 'Contact' },
-    { url: '../dsc106_test_portfolio/resume/index.html', title: 'Resume' },
+    { url: '', title: 'Home' },
+    { url: 'projects/', title: 'Projects' },
+    { url: 'contact/', title: 'Contact' },
+    { url: 'resume/', title: 'Resume' },
     { url: 'https://github.com/deepaldeleena', title: 'GitHub' }
 ];
 
