@@ -133,3 +133,27 @@ form button:hover {
     margin: 0;
     line-height: 1.4;
 }
+
+:root {
+    color-scheme: light dark; /* Supports both light and dark themes */
+}
+
+/* Optional: Customizing system colors */
+body {
+    background-color: canvas;
+    color: canvastext;
+}
+nav {
+    --border-color: oklch(50% 10% 200 / 40%); /* Darker and semi-transparent */
+    border-bottom-color: var(--border-color);
+}
+nav a:hover {
+    background-color: color-mix(in oklch, var(--color-accent), canvas 85%);
+}
+.color-scheme {
+    position: absolute;
+    top: 1rem;
+    right: 1rem;
+    font-size: 80%;
+    font-family: inherit; /* Inherit font from parent */
+}
