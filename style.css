@@ -157,3 +157,47 @@ nav a:hover {
     font-size: 80%;
     font-family: inherit; /* Inherit font from parent */
 }
+/* Container styling */
+#profile-stats {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #profile-stats h2 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+  }
+  
+  /* Grid layout for stats */
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four equal-sized columns */
+    /* gap: 20px; Space between items */
+    justify-content: center;
+    align-items: start;
+  }
+  
+  /* Labels (dt) styling */
+  .stats-grid dt {
+    grid-row: 1;
+    font-size: 0.9rem;
+    font-weight: bold;
+    color: gray; /* Gray text */
+    text-transform: uppercase;
+    text-align: center;
+  }
+  
+  /* Values (dd) styling */
+  .stats-grid dd {
+    grid-row: 2;
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 0;
+  }
+  #latest-projects {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  
