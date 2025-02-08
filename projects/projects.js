@@ -290,10 +290,10 @@ function renderPieChart(projectsGiven) {
                 selectedIndex = selectedIndex === idx ? -1 : idx;
     
                 svg.selectAll('path')
-                    .attr('class', (_, aIdx) => (aIdx === selectedIndex ? 'selected' : ''));
+                    .attr('class', (_, AIdx) => (AIdx === selectedIndex ? 'selected' : ''));
     
                 legend.selectAll('li')
-                    .attr('class', (_, lIdx) => (lIdx === selectedIndex ? 'selected' : ''));
+                    .attr('class', (_, BIdx) => (BIdx === selectedIndex ? 'selected' : ''));
     
                 let currentQuery = searchInput.value.toLowerCase();
                 let filteredProjects = projects;
