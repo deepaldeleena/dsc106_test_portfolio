@@ -200,4 +200,159 @@ nav a:hover {
     margin-top: 20px;
     margin-bottom: 20px;
   }
+
+  article div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Space between elements */
+}
+
+/* Styling for the article container */
+article div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem; /* Adds spacing between elements */
+    font-family: Baskerville, serif; /* Set Baskerville as the font */
+}
+
+/* Styling for the year */
+.project-year {
+    font-variant-numeric: oldstyle-nums; /* Make numbers look natural */
+    font-style: italic; /* Add an elegant italic style */
+    color: #888; /* Soft gray color for the year */
+    margin-top: 0.5rem; /* Adds spacing above the year */
+    text-align: left; /* Align the year to the left */
+}
+
+
+
+
+
+
+.projects-title {
+    margin-bottom: 2rem; /* Add spacing below the title */
+}
+
+.container {
+    display: flex;
+    align-items: center;
+    gap: 5em;
+    /* justify-content: center; */
+}
+
+/* Style for the pie chart */
+#projects-pie-plot {
+    max-width: 20em; /* Reduce the size of the chart */
+    margin-block:2em;
+    overflow:visible;
+}
+
+/* Style for the legend container */
+.legend {
+    display: grid; /* Use a grid layout for the legend items */
+    grid-template-columns: repeat(auto-fill, minmax(9em, 1fr)); /* Responsive grid layout */
+    gap: 0.5rem; /* Spacing between legend items */
+    border: 1px solid #ccc;
+    flex: 1; /* Allow the legend to take up remaining space */
+}
+
+/* Style for each legend item */
+.legend li {
+    display: flex; /* Flex layout for icon and text alignment */
+    align-items: center; /* Center the icon and text vertically */
+    gap: 0.5rem; /* Space between the icon and text */
+}
+
+/* Style for the legend color swatch */
+.swatch {
+    display: inline-block; /* Ensure the swatch has a block layout */
+    width: 1rem; /* Set the width of the swatch */
+    height: 1rem; /* Set the height of the swatch */
+    background-color: var(--color); /* Use the dynamically set color */
+    border-radius: 50%; /* Make the swatch circular */
+    border: 1px solid #ccc; /* Optional: Add a border for better visibility */
+}
+
+/* Container for the search bar */
+.searchBar {
+    display: block;
+    width: 100%; /* Full-width */
+    max-width: 400px; /* Limit maximum width */
+    margin: 20px auto; /* Center horizontally with margin */
+    padding: 10px 15px; /* Add some padding for comfort */
+    font-size: 16px; /* Font size */
+    border: 2px solid #0073e6; /* Border with color */
+    border-radius: 5px; /* Rounded corners */
+    outline: none; /* Remove outline on focus */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+  }
   
+  /* Placeholder text styling */
+  .searchBar::placeholder {
+    color: #bbb; /* Light gray for placeholder text */
+    font-style: italic; /* Italicize placeholder */
+  }
+  
+  /* Styling on focus */
+  .searchBar:focus {
+    border-color: #005bb5; /* Darker blue on focus */
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5); /* Glow effect on focus */
+  }
+
+  /* Highlight the hovered wedge */
+/* svg {
+   &:has(path:hover) {
+    path:not(:hover) {
+    opacity: 0.5;
+   }
+  }
+}
+  
+path:hover {
+    opacity: 0.5;
+}
+
+path {
+    transition: 300ms;
+    cursor: pointer;
+}
+
+.selected {
+    --color: okLCH(60% 45% 0) !important;
+    &:is(path) {
+        fill: var(--color);
+    }
+}
+
+
+.legend li.selected {
+    background-color: var(--color);
+    font-weight: bold;
+} */
+
+/* Highlight the hovered wedge */
+svg:has(path:hover) path:not(:hover) {
+    opacity: 0.5; /* Dim non-hovered paths */
+}
+
+path:hover {
+    opacity: 1; /* Ensure the hovered path is fully visible */
+}
+
+path {
+    transition: 300ms;
+    cursor: pointer; /* Indicate the path is clickable */
+}
+
+.selected {
+    --color: okLCH(60% 45% 0) !important;
+}
+
+path.selected {
+    fill: var(--color); /* Apply the selected color for the wedge */
+}
+
+.legend li.selected {
+    background-color: var(--color); /* Highlight the selected legend item */
+    font-weight: bold; /* Make the text bold for visibility */
+}
