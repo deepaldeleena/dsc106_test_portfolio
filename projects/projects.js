@@ -290,20 +290,13 @@ function renderPieChart(projectsGiven) {
                 selectedIndex = selectedIndex === idx ? -1 : idx;
     
                 svg.selectAll('path')
-                    .attr('class', (_, AIdx) => (AIdx === selectedIndex ? 'selected' : ''));
+                    .attr('class', (_, Idx) => (Idx === selectedIndex ? 'selected' : ''));
     
                 legend.selectAll('li')
-                    .attr('class', (_, BIdx) => (BIdx === selectedIndex ? 'selected' : ''));
+                    .attr('class', (_, Idx) => (Idx === selectedIndex ? 'selected' : ''));
     
-                let currentQuery = searchInput.value.toLowerCase();
                 let filteredProjects = projects;
     
-                if (currentQuery) {
-                    filteredProjects = filteredProjects.filter(project => {
-                        let values = Object.values(project).join('\n').toLowerCase();
-                        return values.includes(currentQuery);
-                    });
-                }
     
                 if (selectedIndex !== -1) {
                     let selectedYear = newData[selectedIndex].label;
@@ -337,7 +330,7 @@ function renderPieChart(projectsGiven) {
                 if (selectedIndex === -1) {
                     renderProjects(projects, projectsContainer, "h2");
                 } else {
-                    let selectedYear = Number(d.label);
+                    let selectedYear = d.label;
                     let filteredProjects = projects.filter((project) => project.year === selectedYear);
                     renderProjects(filteredProjects, projectsContainer, "h2");
                 }
