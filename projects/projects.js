@@ -297,7 +297,6 @@ function renderPieChart(projectsGiven) {
     
                 let filteredProjects = projects;
     
-    
                 if (selectedIndex !== -1) {
                     let selectedYear = newData[selectedIndex].label;
                     filteredProjects = filteredProjects.filter(project => project.year === selectedYear);

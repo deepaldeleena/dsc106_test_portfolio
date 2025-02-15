@@ -19,6 +19,7 @@ let pages = [
     { url: '../dsc106_test_portfolio/projects/index.html', title: 'Projects' },
     { url: '../dsc106_test_portfolio/contact/index.html', title: 'Contact' },
     { url: '../dsc106_test_portfolio/resume/index.html', title: 'Resume' },
+    { url: '../dsc106_test_portfolio/meta/index.html', title: 'Meta' },
     { url: 'https://github.com/deepaldeleena', title: 'GitHub' }
 ];
 

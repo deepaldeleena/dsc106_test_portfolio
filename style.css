@@ -356,3 +356,77 @@ path.selected {
     background-color: var(--color); /* Highlight the selected legend item */
     font-weight: bold; /* Make the text bold for visibility */
 }
+
+
+
+/* Container for the summary stats */
+#stats {
+    font-family: Arial, sans-serif;
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Overall stats container */
+.stats {
+    display: grid;
+    grid-template-rows: auto auto;
+    gap: 10px;
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* Grid layout for headers */
+.stats-header {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 6 equal-width columns */
+    gap: 10px;
+    font-size: 14px;
+    color: #6c757d;
+    font-weight: bold;
+    text-align: center;
+    background: #f1f3f5; /* Light gray background for contrast */
+    padding: 12px 0;
+    border-radius: 5px 5px 0 0; /* Rounded top corners */
+}
+
+/* Grid layout for values */
+.stats-values {
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* Ensure alignment with header */
+    gap: 10px;
+    font-size: 32px; /* Make numbers prominent */
+    font-weight: bold;
+    color: #212529;
+    text-align: center;
+    padding: 15px 0;
+    border-bottom: 2px solid #dee2e6; /* Separator */
+    background: white; /* Keep clean white background */
+    border-radius: 0 0 5px 5px; /* Rounded bottom corners */
+}
+
+/* Ensure labels and values align properly */
+.stat-label, .stat-value {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 50px;
+}
+
+/* Caption styling for additional description */
+.stats-caption {
+    font-size: 14px;
+    color: #6c757d;
+    margin-top: 10px;
+    padding: 10px;
+    background: #f1f3f5;
+    border-radius: 5px;
+    text-align: center;
+    font-weight: bold;
+}
