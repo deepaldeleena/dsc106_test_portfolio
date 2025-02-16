@@ -430,3 +430,200 @@ path.selected {
     text-align: center;
     font-weight: bold;
 }
+
+
+/* Make gridlines subtle and less distracting */
+.gridlines line {
+    stroke: #ccc; /* Light gray color */
+    stroke-opacity: 0.5; /* Reduce visibility */
+    stroke-dasharray: 4, 4; /* Dashed lines for subtlety */
+}
+
+/* Tooltip styling */
+.info {
+    display: grid;
+    grid-template-columns: auto 1fr; /* Labels on left, values on right */
+    gap: 5px 10px;
+    background: rgba(0, 0, 0, 0.8); /* Dark background */
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: 14px;
+    width: max-content;
+    max-width: 250px;
+}
+
+.tooltip {
+    position: absolute;
+    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid #ccc;
+    padding: 5px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+
+/* Tooltip link styling */
+#commit-link {
+    color: lightblue;
+    text-decoration: underline;
+}
+
+/* Dot hover effect */
+circle {
+    transition: 200ms;
+    transform-origin: center;
+    transform-box: fill-box;
+}
+
+circle:hover {
+    transform: scale(1.5);
+}
+
+/* Tooltip Styling */
+#commit-tooltip {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent background */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2); /* Subtle elevation effect */
+    border-radius: 6px; /* Rounded corners */
+    backdrop-filter: blur(5px); /* Frosted glass effect */
+    padding: 10px 15px; /* Spacing inside */
+    font-size: 14px;
+    font-family: Arial, sans-serif;
+    color: #333; /* Darker text for readability */
+    opacity: 0; /* Initially hidden */
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Grid layout for tooltip */
+#commit-tooltip dl {
+    display: grid;
+    grid-template-columns: auto auto; /* Labels in one column, values in another */
+    gap: 5px 10px;
+    margin: 0;
+}
+
+/* Style for labels */
+#commit-tooltip dt {
+    font-weight: bold;
+    color: #666; /* Slightly muted for contrast */
+}
+
+/* Style for values */
+#commit-tooltip dd {
+    margin: 0;
+    font-weight: normal;
+}
+
+/* Show tooltip on hover */
+#commit-tooltip.visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Tooltip container */
+dl.info {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    font-size: 14px;
+    transition: opacity 500ms, visibility 500ms;
+}
+
+/* Hide tooltip smoothly */
+dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+@keyframes marching-ants {
+    to {
+      stroke-dashoffset: -8; /* 5 + 3 */
+    }
+  }
+  
+  .selection {
+    fill-opacity: 0.1;
+    stroke: black;
+    stroke-opacity: 0.7;
+    stroke-dasharray: 5 3;
+    animation: marching-ants 2s linear infinite;
+  }
+
+  /* Styling for Gridlines */
+.gridlines line {
+    stroke: #ddd;
+    stroke-opacity: 0.5;
+    shape-rendering: crispEdges;
+}
+
+.gridlines path {
+    display: none;
+}
+
+/* Tooltip Styling */
+dl.info {
+    position: fixed;
+    top: 1em;
+    left: 1em;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+dl.info[hidden]:not(:hover, :focus-within) {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Dots Styling */
+circle {
+    transition: 200ms;
+    transform-origin: center;
+}
+
+circle:hover {
+    transform: scale(1.5);
+}
+
+/* Selected dots */
+circle.selected {
+    fill: #ff6b6b;
+}
+
+/* Selection Count */
+#selection-count {
+    font-weight: bold;
+    margin-top: 10px;
+}
+
+/* Language Breakdown */
+#language-breakdown {
+    margin-top: 15px;
+    background: #f9f9f9;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+#language-breakdown dt {
+    font-weight: bold;
+    color: #333;
+}
+
+#language-breakdown dd {
+    margin-left: 10px;
+    font-size: 14px;
+    color: #666;
+}
+
+
+
+
