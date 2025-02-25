@@ -3,7 +3,15 @@
 		"title": "National Power Outages Severity Analysis",
 		"year": "2025",
 		"image": "/dsc106_test_portfolio/images/power_outages.jpg",
+		"url": "https://averma205.github.io/National-Power-Outages-Severity-Analysis/",
 		"description": "Analyzed 2,000+ outages over 20+ years, uncovering trends in weather, infrastructure, and population density impacting severity. Conducted data preprocessing, feature engineering, fairness analysis, hypothesis testing, and predictive modeling to highlight key drivers of outage severity. Published an interactive web report highlighting a 30% rise in outages over the last decade."
+	},
+	{
+		"title": "Bike-watching",
+		"year": "2025",
+		"image": "/dsc106_test_portfolio/images/bike-watching.png",
+		"url": "https://deepaldeleena.github.io/bike-watching/",
+		"description": "Bike-Watching is an interactive data visualization project that maps bike lanes and station traffic in Boston and Cambridge using Mapbox and D3.js. It dynamically displays bike traffic patterns, station activity, and flow direction based on real-time data, helping users explore urban cycling trends."
 	},
 	{
 		"title": "SharpKids – 2024 Big Data Hackathon at SDSU ",
@@ -16,12 +24,6 @@
 		"year": "2023",
 		"image": "/dsc106_test_portfolio/images/image_processing.webp",
 		"description": "Developed an image processing app encompassing 100+ image storage operations, processing methods, monetization simulation via inheritance, premium features addition, and image label prediction with 90% accuracy using a KNN classifier."
-	},
-	{
-		"title": "Laudantium reprehenderit placeat perspiciatis.",
-		"year": "2021",
-		"image": "https://vis-society.github.io/labs/2/images/empty.svg",
-		"description": "Quo minus perferendis nulla corrupti repellat dolorem dolore assumenda sit minima ducimus quidem ullam, id ipsa dicta tempora laborum officiis unde possimus cumque nobis alias inventore! Ullam repudiandae iusto nam."
 	},
 	{
 		"title": "Consequuntur autem eos facere.",

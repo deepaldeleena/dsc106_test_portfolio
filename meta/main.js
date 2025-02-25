@@ -146,13 +146,13 @@ function createScatterplot() {
         .attr('r', (d) => rScale(d.totalLines))
         .attr('fill', 'steelblue')
         .style('fill-opacity', 0.7)
-        .on('mouseenter', function (event, commit) { // Change to function() to correctly bind `this`
+        .on('mouseover', function (event, commit) {
             updateTooltipContent(commit);
             updateTooltipVisibility(true);
             updateTooltipPosition(event);
             d3.select(this).style('fill-opacity', 1);
         })
-        .on('mouseleave', function () {
+        .on('mouseout', function () {
             updateTooltipContent({});
             updateTooltipVisibility(false);
             d3.select(this).style('fill-opacity', 0.7);
@@ -164,6 +164,7 @@ function createScatterplot() {
         .on('brush end', brushed);
 
     svg.append('g').attr('class', 'brush').call(brush);
+    svg.select('.dots').raise();
 }
 
 function brushSelector() {

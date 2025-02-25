@@ -45,10 +45,6 @@ nav a:hover {
     border-bottom: 0.4em solid var(--color-accent); /* Add hover border effect */
 }
 
-/* Accent color custom property */
-:root {
-    --color-accent: oklch(65% 50% 0); /* Define accent color */
-}
 /* Remove <ul> and <li> default styles */
 nav ul, 
 nav li {
